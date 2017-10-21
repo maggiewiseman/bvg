@@ -1,0 +1,16 @@
+<div class="thanks above-fold">
+    <figure class="top-fig">
+        <img src="/img/stijn-te-strake-316914.jpg" alt="fried chicken head">
+    </figure>
+
+    <h2>Thank you for pledging to support local farms by committing to eating local for 1 month.</h2>
+    {{#this}}
+    <figure class="signature"><img src="{{imgsrc}}" alt="signature image"></figure>
+    {{/this}}
+    <a href="/petition/signatures">See all {{count}} signers</a>
+
+    <form action="/delete" method="POST" id="deleteSigForm">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    </form>
+    <a href="#" id="delete">Delete My Signature</a>
+</div>

@@ -1,0 +1,45 @@
+<div class="edit above-fold">
+    <div class="side-img">
+        <p class="error">{{#if thiswillneverdisplay}}
+            There was a problem with your form. Please try again.
+            {{/if}}</p>
+        <figure class="top-fig">
+            <img src="/img/thomas-gamstaetter-130746.jpg" alt="fried chicken head">
+        </figure>
+    </div>
+    <div class="right-div">
+        <p class="error">{{#if errorMsg}}
+            There was a problem with your form. Please try again.
+            {{/if}}</p>
+        <form method="post" action="/profile/edit">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="inputs profile edit">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" placeholder="First Name" value="{{this.first_name}}">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" placeholder="Last Name" value="{{this.last_name}}">
+                <label for="email">e-mail</label>
+                <input type="text" name="email" placeholder="e-mail" value="{{this.email}}">
+                <!-- <label for="password">Password</label>
+                <input type="password" name="password" placeholder="password"> -->
+
+                    <p><input type="text" name="business_name" placeholder="Business name"></p>
+                    <p><input type="text" name="homepage" placeholder="Homepage"></p>
+                    <p><input type="textarea" name="bio" placeholder="bio"></p>
+                    <p><input type="text" name="business_age" placeholder="Age of business"></p>
+                    <p><input type="text" name="business_structure" placeholder="Business structure"></p>
+                    <p>Do you generate revenue?</p>
+                    <p>
+                        <input type="radio" id="yes_gen_revenue" name="gen_revenue" value="yes">
+                        <label for="yes_gen_revenue">Yes</label>
+                        <input type="radio" id="no_gen_revenue" name="gen_revenue" value="no">
+                        <label for="no_gen_revenue">No</label>
+                    </p>
+                    <p></p>
+
+            </div>
+            <button type="submit" name="button">UPDATE</button>
+
+        </form>
+    </div>
+</div>

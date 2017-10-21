@@ -1,0 +1,60 @@
+<div class="petition above-fold">
+    <div id="carousel">
+        <div class="food onscreen">
+            <div class="img-txt">
+                <h2 class="carousel-text">Worried about not having enough in the winter? <br>Make pickles! </h2>
+            </div>
+            <img src="/img/anne-preble-198119.jpg" alt="market"></div>
+        <div class="food">
+            <div class="img-txt">
+                <h2 class="carousel-text">Chickens massaged twice a day and given only mineral water (but not from plastic bottles)</h2>
+            </div>
+            <img src="/img/luke-syres-223433.jpg" alt="chickens"></div>
+        <div class="food">
+            <div class="img-txt">
+                <h2 class="carousel-text">Gluten-free, cruelty-free cabbages </h2>
+            </div>
+            <img src="/img/arnaldo-aldana-203173.jpg" alt="cabbages"></div>
+        <div class="food">
+            <div class="img-txt">
+                <h2 class="carousel-text">Non hydrogenated carrots, turnips, and radishes </h2>
+            </div>
+            <img src="/img/keit-trysh-295253.jpg" alt="root veggies"></div>
+        <div class="food">
+            <div class="img-txt">
+                <h2 class="carousel-text">Hypoallergencic, artisan greens</h2>
+            </div>
+            <img src="/img/peter-feghali-110596.jpg" alt="greens"></div>
+        <div class="food">
+            <div class="img-txt">
+                <h2 class="carousel-text">Eggs from heritage breed birds fed a diet of sheeps milk, soy, and hazelnuts </h2>
+            </div>
+            <img src="/img/rachael-gorjestani-154909.jpg" alt="eggs"></div>
+    </div>
+
+    <div class="under-carousel">
+        <h2>Pledge to eat local for 1 month! Who's in?</h2>
+
+        <div id="peition-form-div">
+            <form method="post" action="/petition">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                <div class="sig-div">
+
+                    <p>Become part of the locavor movement! <br>Sign below to show your commitment to local eating: </p>
+                    <p class="error">{{#if error}}
+                    There was a problem with your form. Please try again.
+                    {{/if}}</p>
+                    <input type="hidden" name="signature" id="signature">
+
+                    <section>
+                        <canvas id="canv" width="300" height="100"></canvas>
+                    </section>
+                </div>
+                <div id="button-div">
+                    <button id="clear-btn" type="button" name="clear">CLEAR</button>
+                    <button type="submit" name="button">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

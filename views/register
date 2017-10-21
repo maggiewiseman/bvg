@@ -1,0 +1,65 @@
+<div class="petition register">
+    <div class="above-fold">
+        <h1>Eat Local!</h1>
+        <a id="more-btn"  class="btn" href="#more">Find Out More</a>
+        <h2>Become part of the <span class="emphasis">locavore</span> movement! Join <span class="emphasis">Locavore International!</span></h2>
+
+        <div id="carousel">
+            <div class="food onscreen"><img src="/img/anne-preble-198119.jpg" alt="market"></div>
+            <div class="food"><img src="/img/luke-syres-223433.jpg" alt="chickens"></div>
+            <div class="food"><img src="/img/arnaldo-aldana-203173.jpg" alt="cabbages"></div>
+            <div class="food"><img src="/img/keit-trysh-295253.jpg" alt="root veggies"></div>
+            <div class="food"><img src="/img/peter-feghali-110596.jpg" alt="greens"></div>
+            <div class="food"><img src="/img/rachael-gorjestani-154909.jpg" alt="eggs"></div>
+        </div>
+        <p class="error">{{#if errorMsg}}
+            There was a problem with your form. {{errorMsg}} Please try again.
+            {{/if}}
+        </p>
+        <form method="post" action="/register">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <div class="inputs register">
+                    <div>
+                    <p>
+                    <input type="text" name="first_name" placeholder="First Name"></p>
+                    <p>
+                    <input type="text" name="last_name" placeholder="Last Name"></p>
+                </div>
+                <div>
+                    <p>
+                    <input type="text" name="email" placeholder="E-mail"></p>
+                    <p>
+                    <input type="password" name="password" placeholder="Password"></p>
+
+                </div>
+                <p><button type="submit" name="button">Join!</button></p>
+            </div>
+        </form>
+
+        <p class="redirect-p">If you are already a member, please <a href="/login">login</a></p>
+    </div>
+</div>
+<div class="below-fold">
+    <div id="more">
+        <div class="side-img">
+            <figure class="side-fig">
+                <img src="/img/rachael-gorjestani-154909.jpg" alt="fried chicken head">
+            </figure>
+
+        </div>
+        <div class="side-info">
+            <h2>Benefits of Local Eating</h2>
+
+            <ul>
+                <li><span class="emphasis">You: </span> Better health.</li>
+                <li><span class="emphasis">Animals: </span> Factory farming is bad.</li>
+                <li><span class="emphasis">Environment: </span> Monoculture is bad. Biodiversity is good.</li>
+                <li><span class="emphasis">Community: </span> Supports a vibrant, diverse community.</li>
+            </ul>
+        </div>
+
+    </div>
+    <p class="more-p">Local eating creates a virtuous circle of goodness. Buying food from local farmers incentives farmers to plant a greater diversity of crops to feed you and your family.  Talking to the farmer directly means you can ask them about how they care for the animals and the land.  If their customers care about how food is produced and animals raised, they will make changes that support the entire ecosystem.</p>
+
+    <a id="signup-btn" class="btn" href="/register">Signup!</a>
+</div>

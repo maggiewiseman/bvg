@@ -1,0 +1,40 @@
+body {
+  margin: 30px;
+}
+
+.frontpage_square {
+  position:relative;
+  overflow:hidden;
+  padding-bottom:100%;
+  background-image: #3c3c3c;
+}
+
+.frontpage_square.half {
+  padding-bottom: calc(50% - 15px);
+}
+
+.frontpage_square.double {
+  padding-bottom: calc(200% + 0px);
+}
+
+.frontpage_square img{
+position:absolute;
+}
+.frontpage_padding {
+    padding-right: calc(200% + 30px);
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.feature-box-spacing {
+    position: absolute !important;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    frontpage_square.double.reduce{
+    // padding-bottom: none;   
+    }
+}

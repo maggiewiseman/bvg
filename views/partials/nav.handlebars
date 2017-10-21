@@ -1,0 +1,14 @@
+<nav>
+    <ul class="home">
+        <li><p class="logo">Locavore International</p>
+        <li><a href="/petition"><i class="fa fa-home"></i>Home</a></li>
+    </ul>
+    <ul>
+        {{#if nav.loggedin}}
+        <li><a href="/profile/edit"><i class="fa fa-user"></i>Edit Profile</a></li>
+        <li><a href="/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+        {{else}}
+        <li><a href="/login"><i class="fa fa-sign-in"></i>Login</a></li>
+        {{/if}}
+    </ul>
+</nav>
